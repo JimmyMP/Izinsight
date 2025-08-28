@@ -1,6 +1,6 @@
 # Izi Copilot Mobile
 
-Plataforma de Inteligencia 360° para el Vendedor de IziPay - Versión Móvil
+Plataforma de Inteligencia 360° para el Vendedor de IziPay – Versión Móvil (Expo)
 
 ## Descripción
 
@@ -24,20 +24,37 @@ Esta es la versión móvil de la plataforma Izi Copilot, desarrollada con React 
 - Ionicons
 - Expo Router
 
-## Instalación
+## Prerrequisitos
 
-1. Clona el repositorio
-2. Instala las dependencias:
-   ```bash
-   npm install
-   ```
+- Node.js 18 o superior
+- Expo CLI (opcional): `npm i -g expo`
+- Dispositivo con Expo Go instalado o emulador (Android Studio / Xcode)
 
-3. Inicia la aplicación:
-   ```bash
-   npx expo start --tunnel
-   ```
+## Instalación y ejecución
 
-4. Escanea el código QR con la aplicación Expo Go en tu dispositivo móvil
+1) Instala dependencias
+```bash
+npm install
+```
+
+2) Ejecuta en desarrollo (elige tu destino)
+```bash
+# Abre el servidor de desarrollo
+npm run start
+
+# Android (emulador o dispositivo con ADB)
+npm run android
+
+# iOS (solo macOS con Xcode)
+npm run ios
+
+# Web (React Native Web)
+npm run web
+```
+
+3) Conectar con Expo Go
+- Desde el terminal de Expo, escanea el QR con Expo Go.
+- Si tu red bloquea conexiones LAN, usa el modo túnel desde la interfaz de Expo.
 
 ## Estructura del Proyecto
 
@@ -55,6 +72,14 @@ Movil/
 ├── app.json
 └── README.md
 ```
+
+## Scripts disponibles
+
+- `npm run start`: Inicia el servidor de desarrollo de Expo
+- `npm run android`: Abre la app en un dispositivo/emulador Android
+- `npm run ios`: Abre la app en iOS (macOS)
+- `npm run web`: Ejecuta en navegador (React Native Web)
+- `npm run lint`: Ejecuta el linter
 
 ## Funcionalidades Principales
 
@@ -116,3 +141,13 @@ La aplicación utiliza un diseño moderno y accesible con:
 ## Licencia
 
 Este proyecto está bajo la licencia MIT.
+
+## Solución de problemas
+
+- El QR no carga en Expo Go:
+  - Cambia a modo "tunnel" desde la UI de Expo (conexiones restringidas en LAN).
+  - Verifica que el dispositivo y el PC estén en la misma red.
+- Error con `react-native-reanimated`: Asegúrate de reiniciar el bundler tras instalar dependencias.
+- No abre en Android:
+  - Abre Android Studio, instala el SDK y crea/arranca un emulador, o conecta un dispositivo con "Depuración USB".
+- Tipos/TSXX: Ejecuta `npm install` y reinicia el servidor si agregaste/actualizaste paquetes.

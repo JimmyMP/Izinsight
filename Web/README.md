@@ -51,38 +51,29 @@ izinsight es una herramienta de inteligencia de negocio diseñada específicamen
 ## 🚀 Instalación y Configuración
 
 ### Prerrequisitos
-- Node.js (versión 16 o superior)
-- npm o yarn
+- Node.js 18 o superior
+- npm
 
 ### Pasos de Instalación
 
-1. **Clonar el repositorio**
-```bash
-git clone <url-del-repositorio>
-cd izinsight
-```
-
-2. **Instalar dependencias**
+1) Instalar dependencias
 ```bash
 npm install
 ```
 
-3. **Ejecutar en modo desarrollo**
+2) Ejecutar en modo desarrollo
 ```bash
 npm start
 ```
 
-4. **Abrir en el navegador**
-```
-http://localhost:3000
-```
+3) Abrir en el navegador: `http://localhost:3000`
 
 ### Scripts Disponibles
 
-- `npm start` - Ejecuta la aplicación en modo desarrollo
-- `npm build` - Construye la aplicación para producción
-- `npm test` - Ejecuta las pruebas
-- `npm eject` - Expone la configuración de webpack (irreversible)
+- `npm start`: Ejecuta la aplicación en modo desarrollo
+- `npm run build`: Construye la aplicación para producción
+- `npm test`: Ejecuta las pruebas
+- `npm run eject`: Expone la configuración de webpack (irreversible)
 
 ## 📁 Estructura del Proyecto
 
@@ -185,11 +176,14 @@ El proyecto incluye datos simulados para demostración. En producción, estos de
 npm run build
 ```
 
-### Servidor de Producción
+### Servir build estático
 ```bash
 npm install -g serve
 serve -s build
 ```
+
+### Hosting sugerido
+- Cualquier hosting estático (Netlify, Vercel, GitHub Pages, Nginx)
 
 ## 🤝 Contribución
 
